@@ -1,0 +1,76 @@
+/* styles.css */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+  font-size: 72px;
+  background: linear-gradient(to right, white, rgb(125, 125, 125));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.separator {
+  height: 2px;
+  background: linear-gradient(to right, rgb(220, 220, 220), rgb(125, 125, 125));
+  margin: 10px 0;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s;
+}
+
+.subtitle {
+  font-size: 32px;
+  background: linear-gradient(to right, white, rgb(125, 125, 125));
+  font-family: Arial, sans-serif;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+}
+
+.paragraph {
+  font-size: 20px;
+  background: linear-gradient(to right, white, rgb(125, 125, 125));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: Arial, sans-serif;
+  margin: 10px 0 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s;
+}
+
+.text-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: white;
+  text-align: left;
+  z-index: 1;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+}
