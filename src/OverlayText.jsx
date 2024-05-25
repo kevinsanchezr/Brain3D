@@ -10,6 +10,7 @@ const OverlayText = () => {
       <div className="separator"></div>
       <h2 className="subtitle">BIOMEDICAL ENGINEER</h2>
       <p className="paragraph">Full-Stack Developer - Biomedical Solutions</p>
+   
     </div>
   );
 }

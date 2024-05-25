@@ -1,5 +1,3 @@
-/* styles.css */
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -73,4 +71,9 @@
   .paragraph {
     font-size: 16px;
   }
+}
+
+.Foto{
+  width: 50px;
+  flex-direction: column;
 }
