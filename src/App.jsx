@@ -1,40 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { data } from './data';
-import { Tubes, createBrainCurves } from './BrainTubes';
-import BrainParticles from './BrainParticles';
+import { data } from './Threebrain/data';
+import { Tubes, createBrainCurves } from './Threebrain/BrainTubes';
+import BrainParticles from './Threebrain/BrainParticles';
 import SpaceParticles from './SpaceParticles';
-import OverlayText from './OverlayText';
-import * as THREE from 'three';
-import './stylesText.css';
+import OverlayText from './components/OverlayText';
+import CameraController from './components/CameraController';
+import useMousePosition from './components/MouseHandler';
+
 
 const PATHS = data.economics && data.economics[0] ? data.economics[0].paths || [] : [];
 const brainCurves = createBrainCurves(PATHS);
 
-function CameraController({ mousePosition }) {
-  useFrame(({ camera }) => {
-    const factor = 0.001; // Reduce this factor to make the movement more subtle and slow
-    camera.position.x += (mousePosition.x * factor - camera.position.x) * 0.05;
-    camera.position.y += (-mousePosition.y * factor - camera.position.y) * 0.05;
-    camera.lookAt(0, 0, 0);
-  });
-  return null;
-}
-
 export default function App() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (event) => {
-    setMousePosition({ x: event.clientX - window.innerWidth / 2, y: event.clientY - window.innerHeight / 2 });
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  const mousePosition = useMousePosition();
 
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
@@ -45,7 +25,7 @@ export default function App() {
         {brainCurves.length > 0 && (
           <>
             <Tubes allthecurves={brainCurves} />
-            <BrainParticles allthecurves={brainCurves} speedMultiplier={0.1} />
+            <BrainParticles allthecurves={brainCurves} speedMultiplier={0.09} />
           </>
         )}
         <SpaceParticles count={500} />
