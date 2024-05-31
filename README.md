@@ -2,6 +2,8 @@
 
 This project is a creative, non-anatomical 3D brain visualization built using React, Vite, and Three.js. It was inspired by a web app visualization I came across and decided to recreate as a practice exercise.
 
+![](https://github.com/kevinsanchezr/Brain3D/blob/main/brain.png)
+
 Table of Contents
 
 Demo
