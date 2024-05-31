@@ -1,4 +1,5 @@
 3D Brain Visualization
+
 This project is a creative, non-anatomical 3D brain visualization built using React, Vite, and Three.js. It was inspired by a web app visualization I came across and decided to recreate as a practice exercise.
 
 Table of Contents
