@@ -47,9 +47,6 @@ To start the development server, run:
 npm run dev
 This will start the Vite development server and you can view the project by navigating to http://localhost:3000 in your browser.
 
-Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
 Fork the Project
 Create your Feature Branch (git checkout -b feature/AmazingFeature)
 Commit your Changes (git commit -m 'Add some AmazingFeature')
